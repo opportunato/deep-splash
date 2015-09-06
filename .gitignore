@@ -1,0 +1,5 @@
+node_modules/
+public/components
+public/css/*.css
+.sass-cache
+config/config.js
