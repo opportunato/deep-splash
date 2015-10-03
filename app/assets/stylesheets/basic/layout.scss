@@ -248,16 +248,19 @@ footer {
 }
 
 iframe {
-  margin-bottom: $grid;
   width: 100%;
+  max-width: $sizeXL - $grid;
+  margin: auto;
+  margin-bottom: $grid;
 
   @include respond-to(small) {
+    margin: auto;
     margin-bottom: $grid*2;
     height: 60vh;
   }
 
   @include respond-to(medium) {
-    height: 80vh;
+    height: 70vh;
   }
 }
 
