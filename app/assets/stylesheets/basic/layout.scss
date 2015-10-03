@@ -21,15 +21,11 @@ a {
   align-items: center;
   justify-content: space-between;
 
-  max-width: $sizeL;
+  max-width: $sizeXL;
   padding: 0 $grid;
   margin: auto;
   text-transform: uppercase;
   height: 50px;
-
-  @include respond-to(small) {
-    padding: 0 $grid/2;
-  }
 
   > h1 {
     font-size: .8em;
@@ -55,6 +51,8 @@ a {
   flex-wrap: wrap;
   justify-content: center;
 
+  margin-bottom: $grid*2;
+
   article {
     position: relative;
     padding: 0 $grid $grid $grid;
@@ -64,7 +62,7 @@ a {
     @include respond-to(small) {
       padding: 0 $grid/2 $grid $grid/2;
       width: 50%;
-      max-width: $sizeL/2;
+      max-width: $sizeXL/2;
     }
 
     &:first-child {
@@ -156,12 +154,21 @@ a {
 
       @include respond-to(medium) {
         font-size: 1.4em;
+        padding: 0 $grid;
       }
     }
 
     > h3 {
       font-weight: normal;
       font-size: .7em;
+
+      @include respond-to(small) {
+        font-size: .8em;
+      }
+
+      @include respond-to(medium) {
+        font-size: 1em;
+      }
     }
   }
 
@@ -185,6 +192,45 @@ a {
 
     @include respond-to(small) {
       width: 60px;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin-bottom: $grid*2;
+
+  .logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    display: inline-block;
+    margin-bottom: $grid/2;
+
+    @include respond-to(small) {
+      font-size: 1em;
+    }
+  }
+
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: 360px;
+    margin: auto;
+    font-size: .7em;
+
+    @include respond-to(small) {
+      font-size: .8em;
+    }
+
+    @include respond-to(medium) {
+      font-size: 1em;
+    }
+
+    a {
+      font-weight: bold;
     }
   }
 }
