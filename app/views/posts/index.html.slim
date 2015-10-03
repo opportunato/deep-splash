@@ -1,14 +1,10 @@
-.posts.featured
-  - @posts.each do |post|
-    article
-      = image_tag post.preview_image.url(:large)
-      h2 = post.title
-      h3 = post.author
-
-
 .posts.col-1
   - @posts.each do |post|
     article
-      = image_tag post.preview_image.url(:large)
-      h2 = post.title
-      h3 = post.author
+      .image
+        = image_tag post.preview_image.url(:large), class: "cover-image"
+        = image_tag 'play.svg', class: "play-button"
+      .info
+        h2 = post.title
+        h3 = post.author
+        = image_tag 'play.svg', class: "play-button-featured"

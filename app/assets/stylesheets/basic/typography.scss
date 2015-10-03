@@ -21,11 +21,11 @@ h1 {
 }
 
 h2 {
-  @include header-font-size(1em,1.3em,1.4em,1.6em);
+  @include header-font-size(1.2em,1.3em,1.4em,1.6em);
 }
 
 h3 {
-  @include header-font-size(1em,1.2em,1.3em,1.4em);
+  @include header-font-size(.8em,1.2em,1.3em,1.4em);
 }
 
 h4 {

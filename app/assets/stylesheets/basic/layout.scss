@@ -16,22 +16,19 @@ a {
 
 }
 
-.col-1 {
-  max-width: $sizeXL;
-  padding: 0 $grid;
-  margin: auto;
-}
-
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  max-width: $sizeXL;
+  padding: 0 $grid;
+  margin: auto;
   text-transform: uppercase;
-  height: 40px;
+  height: 50px;
 
   > h1 {
-    font-size: .9em;
+    font-size: .8em;
     margin: 0;
   }
 
@@ -42,8 +39,78 @@ a {
 
 
 .posts {
+  display: flex;
+  flex-wrap: wrap;
+
+  article {
+    position: relative;
+    padding: 0 $grid $grid $grid;
+    width: 100%;
+    text-align: center;
+
+    @include respond-to(small) {
+      width: 50%;
+    }
+
+    &:first-child {
+      padding: 0 0 $grid 0;
+      width: 100%;
+
+      .info {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .play-button { display: none; }
+      .play-button-featured {
+        display: inline-block;
+        width: 50px;
+      }
+
+      .image {
+        margin-bottom: 0;
+      }
+
+      .cover-image {
+        opacity: .5;
+      }
+    }
+  }
+
   img {
     display: block;
     width: 100%;
+  }
+
+  .info {
+    > h2 {
+
+    }
+
+    > h3 {
+      font-weight: normal;
+    }
+  }
+
+  .image {
+    position: relative;
+
+    margin-bottom: $grid/2;
+  }
+
+  .cover-image {
+    opacity: .8;
+  }
+
+  .play-button-featured { display: none; }
+
+  .play-button {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
   }
 }
