@@ -125,10 +125,15 @@ a {
       }
 
       .cover-image {
-        opacity: .5;
+        opacity: .6;
+        object-fit: cover;
+        height: 240px;
+
+        @include respond-to(small) {
+          height: 350px;
+        }
 
         @include respond-to(medium) {
-          object-fit: cover;
           height: 500px;
         }
       }
@@ -200,6 +205,7 @@ a {
 footer {
   text-align: center;
   margin-bottom: $grid*2;
+  color: #888;
 
   .logo {
     text-transform: uppercase;
