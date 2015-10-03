@@ -21,6 +21,7 @@ gem 'carrierwave'
 gem 'slim'
 
 gem 'autoprefixer-rails'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
   gem 'byebug'

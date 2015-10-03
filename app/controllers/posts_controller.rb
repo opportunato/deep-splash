@@ -4,5 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.friendly.find(params[:id])
+    @posts = Post.published.where.not(id: @post.id)
   end
 end
