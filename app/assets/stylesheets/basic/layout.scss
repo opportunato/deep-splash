@@ -30,10 +30,18 @@ a {
   > h1 {
     font-size: .8em;
     margin: 0;
+
+    @include respond-to(small) {
+      font-size: 1em;
+    }
   }
 
   > .nav-link {
     font-size: .6em;
+
+    @include respond-to(small) {
+      font-size: .8em;
+    }
   }
 }
 
@@ -62,6 +70,10 @@ a {
         transform: translate(-50%,-50%);
         width: 100%;
         max-width: 280px;
+
+        @include respond-to(small) {
+          max-width: 500px;
+        }
       }
 
       .play-button { display: none; }
@@ -76,6 +88,11 @@ a {
 
       .cover-image {
         opacity: .5;
+
+        @include respond-to(medium) {
+          object-fit: cover;
+          height: 500px;
+        }
       }
     }
   }
@@ -86,10 +103,6 @@ a {
   }
 
   .info {
-    > h2 {
-
-    }
-
     > h3 {
       font-weight: normal;
     }
