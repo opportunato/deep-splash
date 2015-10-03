@@ -12,8 +12,8 @@ a {
   text-decoration: none;
 }
 
-.content {
-
+* {
+  box-sizing: border-box;
 }
 
 .main-header {
@@ -21,11 +21,15 @@ a {
   align-items: center;
   justify-content: space-between;
 
-  max-width: $sizeXL;
+  max-width: $sizeL;
   padding: 0 $grid;
   margin: auto;
   text-transform: uppercase;
   height: 50px;
+
+  @include respond-to(small) {
+    padding: 0 $grid/2;
+  }
 
   > h1 {
     font-size: .8em;
@@ -40,7 +44,7 @@ a {
     font-size: .6em;
 
     @include respond-to(small) {
-      font-size: .8em;
+      font-size: .7em;
     }
   }
 }
@@ -49,6 +53,7 @@ a {
 .posts {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   article {
     position: relative;
@@ -57,12 +62,16 @@ a {
     text-align: center;
 
     @include respond-to(small) {
+      padding: 0 $grid/2 $grid $grid/2;
       width: 50%;
+      max-width: $sizeL/2;
     }
 
     &:first-child {
-      padding: 0 0 $grid 0;
+      padding: 0;
+      margin-bottom: $grid;
       width: 100%;
+      max-width: 100%;
 
       .info {
         position: absolute;
@@ -72,14 +81,44 @@ a {
         max-width: 280px;
 
         @include respond-to(small) {
-          max-width: 500px;
+          max-width: 400px;
+        }
+
+        @include respond-to(medium) {
+          max-width: 600px;
+        }
+
+        > h2 {
+          font-size: 1.2em;
+
+          @include respond-to(small) {
+            font-size: 1.6em;
+          }
+
+          @include respond-to(medium) {
+            font-size: 2.2em;
+          }
+        }
+
+        > h3 {
+          font-weight: normal;
+          font-size: .8em;
+
+          @include respond-to(small) {
+            font-size: 1em;
+          }
         }
       }
 
       .play-button { display: none; }
+
       .play-button-featured {
         display: inline-block;
-        width: 50px;
+        width: 40px;
+
+        @include respond-to(small) {
+          width: 60px;
+        }
       }
 
       .image {
@@ -97,14 +136,32 @@ a {
     }
   }
 
+  a {
+    display: block;
+  }
+
   img {
     display: block;
     width: 100%;
   }
 
   .info {
+    > h2 {
+      font-size: 1em;
+      margin-bottom: $grid/4;
+
+      @include respond-to(small) {
+        font-size: 1.2em;
+      }
+
+      @include respond-to(medium) {
+        font-size: 1.4em;
+      }
+    }
+
     > h3 {
       font-weight: normal;
+      font-size: .7em;
     }
   }
 
@@ -124,6 +181,10 @@ a {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    width: 50px;
+    width: 40px;
+
+    @include respond-to(small) {
+      width: 60px;
+    }
   }
 }
