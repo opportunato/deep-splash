@@ -1,7 +1,7 @@
 article
   = link_to post
     .image
-      = image_tag post.preview_image.url(:large), class: "cover-image"
+      = image_tag post.preview_image.url(index == 0), class: "cover-image"
       = image_tag 'play.svg', class: "play-button"
     .info
       h2 = post.title
