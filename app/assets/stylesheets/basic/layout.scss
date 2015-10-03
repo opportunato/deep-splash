@@ -38,7 +38,7 @@ a {
   }
 
   > .nav-link {
-    font-size: .6em;
+    font-size: .5em;
 
     @include respond-to(small) {
       font-size: .7em;
@@ -54,19 +54,12 @@ a {
 
   margin-bottom: $grid*2;
 
-  article {
-    position: relative;
-    padding: 0 $grid $grid $grid;
-    width: 100%;
-    text-align: center;
+  @include respond-to(medium) {
+    margin-bottom: $grid*4;
+  }
 
-    @include respond-to(small) {
-      padding: 0 $grid/2 $grid $grid/2;
-      width: 50%;
-      max-width: $sizeXL/2;
-    }
-
-    &:first-child {
+  &.posts-index {
+    article:first-child {
       padding: 0;
       margin-bottom: $grid;
       width: 100%;
@@ -140,6 +133,19 @@ a {
     }
   }
 
+  article {
+    position: relative;
+    padding: 0 $grid $grid $grid;
+    width: 100%;
+    text-align: center;
+
+    @include respond-to(small) {
+      padding: 0 $grid/2 $grid $grid/2;
+      width: 50%;
+      max-width: $sizeXL/2;
+    }
+  }
+
   a {
     display: block;
   }
@@ -205,7 +211,6 @@ a {
 footer {
   text-align: center;
   margin-bottom: $grid*2;
-  color: #888;
 
   .logo {
     text-transform: uppercase;
@@ -238,6 +243,74 @@ footer {
 
     a {
       font-weight: bold;
+    }
+  }
+}
+
+iframe {
+  margin-bottom: $grid;
+  width: 100%;
+
+  @include respond-to(small) {
+    margin-bottom: $grid*2;
+    height: 60vh;
+  }
+
+  @include respond-to(medium) {
+    height: 80vh;
+  }
+}
+
+.post-page {
+  text-align: center;
+  margin-bottom: $grid;
+  padding: 0 $grid;
+
+  @include respond-to(small) {
+    margin-bottom: $grid*2;
+  }
+
+  @include respond-to(large) {
+    margin-bottom: $grid*4;
+  }
+
+  > h1 {
+    max-width: $sizeL;
+    margin: auto;
+    margin-bottom: $grid/2;
+  }
+
+  > h2 {
+    font-weight: normal;
+    font-size: .8em;
+    margin-bottom: $grid;
+
+    @include respond-to(small) {
+      font-size: 1em;
+      margin-bottom: $grid*2;
+    }
+  }
+
+  .post-body {
+    max-width: $sizeM;
+    margin: auto;
+    text-align: left;
+    margin-bottom: $grid;
+
+    font-size: .8em;
+
+    @include respond-to(small) {
+      font-size: 1em;
+      margin-bottom: $grid*2;
+    }
+  }
+
+  .post-link {
+    font-weight: bold;
+    font-size: .8em;
+
+    @include respond-to(small) {
+      font-size: 1em;
     }
   }
 }

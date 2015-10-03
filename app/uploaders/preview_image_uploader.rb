@@ -5,7 +5,7 @@ class PreviewImageUploader < BaseUploader
   end
 
   version :large do
-    process resize_to_fill: [1600, 700]
+    process resize_to_fill: [1600, 1000]
     process convert: 'jpg'
   end
 end
