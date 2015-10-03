@@ -6,10 +6,10 @@ html
     = stylesheet_link_tag 'application', media: 'all'
 
   body
-    header
-      | about
-      h1 The Deep Splash
-      | twitter
+    header.main-header
+      a href="#" About
+      h1=link_to 'The Deep Splash', root_path
+      a href="https://twitter.com/Deep_Splash" Twitter
 
     = yield
 

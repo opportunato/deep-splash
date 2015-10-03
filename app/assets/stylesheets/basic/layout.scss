@@ -1,0 +1,18 @@
+body {
+  background: $color-black;
+  font-family: $base-font-family;
+  color: white;
+  text-rendering: optimizeLegibility;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-header {
+  display: flex;
+  text-transform: uppercase;
+}

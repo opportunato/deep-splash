@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Galano Alt';
+  src: asset-url('galano_classic_alt.woff') format('woff'), /* Modern Browsers */
+       asset-url('galano_classic_alt.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  normal;
+}
+
+@font-face {
+  font-family: 'Galano Alt';
+  src: asset-url('galano_classic_alt_bold.woff') format('woff'), /* Modern Browsers */
+       asset-url('galano_classic_alt_bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  bold;
+}
+
+h1 {
+  @include h1-font-size;
+}
+
+h2 {
+  @include header-font-size(1em,1.3em,1.4em,1.6em);
+}
+
+h3 {
+  @include header-font-size(1em,1.2em,1.3em,1.4em);
+}
+
+h4 {
+  @include header-font-size(1em,1.1em,1.2em,1.2em);
+}
