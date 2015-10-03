@@ -6,11 +6,12 @@ html
     = stylesheet_link_tag 'application', media: 'all'
 
   body
-    header.main-header
-      a href="#" About
-      h1=link_to 'The Deep Splash', root_path
-      a href="https://twitter.com/Deep_Splash" Twitter
+    .content
+      header.main-header.col-1
+        a href="#" About
+        h1=link_to 'The Deep Splash', root_path
+        a href="https://twitter.com/Deep_Splash" Twitter
 
-    = yield
+      = yield
 
     = javascript_include_tag 'application'

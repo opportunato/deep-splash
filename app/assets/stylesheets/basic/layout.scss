@@ -12,6 +12,15 @@ a {
   text-decoration: none;
 }
 
+.content {
+
+}
+
+.col-1 {
+  max-width: $sizeXL;
+  margin: auto;
+}
+
 .main-header {
   display: flex;
   text-transform: uppercase;
