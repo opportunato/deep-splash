@@ -10,7 +10,12 @@ body {
 
   @include respond-to(small) {
     width: 100%;
+    padding: 0 $grid/2;
   }
+
+  // @include respond-to(medium) {
+  //   padding: 0 $grid/2;
+  // }
 }
 
 a {
@@ -59,6 +64,10 @@ a {
         font-size: .8em;
         margin-left: $grid;
       }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -94,7 +103,7 @@ a {
           }
 
           @include respond-to(large) {
-            width: 500px;
+            width: 480px;
           }
 
           @include respond-to(x-large) {
@@ -284,7 +293,6 @@ iframe {
 .post-page {
   text-align: center;
   margin-bottom: $grid;
-  padding: 0 $grid;
 
   @include respond-to(small) {
     margin-bottom: $grid*2;
@@ -295,7 +303,6 @@ iframe {
   }
 
   .post-body {
-    max-width: $sizeL/3*2;
     margin: auto;
     text-align: left;
     margin-bottom: $grid;
@@ -305,6 +312,11 @@ iframe {
     @include respond-to(small) {
       font-size: 1em;
       margin-bottom: $grid*2;
+      padding: 0 $grid/2;
+    }
+
+    @include respond-to(medium) {
+      max-width: $sizeL/3*2;
     }
 
     > h1 {
@@ -313,27 +325,32 @@ iframe {
 
     > h2 {
       font-weight: normal;
-      font-size: .8em;
-      margin-bottom: $grid;
+      font-size: 1.2em;
 
       @include respond-to(small) {
-        font-size: 1em;
         margin-bottom: $grid;
+        font-size: 1em;
       }
     }
 
     > .main-copy {
       margin-bottom: $grid;
+      font-size: 1.2em;
+
+      @include respond-to(small) {
+        font-size: 1em;
+      }
 
       > p {
         text-align: justify;
+        margin-top: 0;
       }
     }
   }
 
   .post-link {
     text-decoration: underline;
-    font-size: .8em;
+    font-size: 1.2em;
 
     @include respond-to(small) {
       font-size: 1em;
