@@ -13,4 +13,8 @@ module ApplicationHelper
 
     content_tag :iframe, nil, src: link, frameborder: "0", allowfullscreen: true
   end
+
+  def strip_url_protocol(url)
+    url.sub(/.*?:\/\//, '').sub(/\/$/, '')
+  end
 end

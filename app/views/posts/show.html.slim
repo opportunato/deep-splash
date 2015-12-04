@@ -6,8 +6,7 @@ article.post-page
     h2 = @post.author
     .main-copy
       = @post.body.html_safe
-    a.post-link href="#" Link goes here
-    / = @post.link
+    = link_to strip_url_protocol(@post.link), @post.link, class: "post-link", target: "_blank"
 
 .posts
   - @posts.each do |post|
