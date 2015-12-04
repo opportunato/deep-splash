@@ -1,12 +1,13 @@
 article.post-page
   .iframe
     = post_video(@post)
-  h1 = @post.title
-  h2 = @post.author
   .post-body
-    = @post.body.html_safe
-  a.post-link href="#" Link goes here
-  / = @post.link
+    h1 = @post.title
+    h2 = @post.author
+    .main-copy
+      = @post.body.html_safe
+    a.post-link href="#" Link goes here
+    / = @post.link
 
 .posts
   - @posts.each do |post|

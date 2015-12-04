@@ -7,17 +7,20 @@ html
 
   body
     header.main-header.col-1
-      a.nav-link href="#" About
       h1=link_to 'The Deep Splash', root_path
-      a.nav-link href="https://twitter.com/Deep_Splash" Twitter
+      div
+        a.nav-link href="#" About
+        a.nav-link href="https://www.instagram.com/thedeepsplash/" target="_blank" Instagram
+        a.nav-link href="mailto:thedeepflash@gmail.com" Email
 
     = yield
 
-    footer
-      =link_to 'The Deep Splash', root_path, class: 'logo'
-      p
-        span For further information please contact us at:
-        a href="mailto:thedeepflash@gmail.com" thedeepflash@gmail.com
+    footer.main-footer
+      h1=link_to 'The Deep Splash', root_path, class: 'logo'
+      div
+        a.nav-link href="#" About
+        a.nav-link href="https://www.instagram.com/thedeepsplash/" target="_blank" Instagram
+        a.nav-link href="mailto:thedeepflash@gmail.com" Email
 
     / .about-popup
     /   p The Deep Splash is a project documenting the diverging ideas and motivations of Lithuanian  emigres working in the Arts.
