@@ -98,7 +98,6 @@ a {
           }
 
           @include respond-to(medium) {
-            padding-left: $grid;
             width: 320px;
           }
 
