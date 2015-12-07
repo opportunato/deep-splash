@@ -18,7 +18,10 @@ gem 'turbolinks'
 gem 'mini_magick'
 gem 'carrierwave'
 
+gem 'mina-stack', github: 'div/mina-stack', group: :development
+
 gem 'slim'
+gem 'puma'
 
 gem 'autoprefixer-rails'
 gem 'friendly_id', '~> 5.1.0'
