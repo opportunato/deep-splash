@@ -27,6 +27,14 @@ a {
   box-sizing: border-box;
 }
 
+footer.main-footer {
+  margin-top: $grid*2;
+
+  @include respond-to(small) {
+    margin-top: $grid*4;
+  }
+}
+
 .main-header,
 .main-footer {
   display: flex;
@@ -35,8 +43,7 @@ a {
 
   max-width: $sizeXL;
   margin: auto;
-  text-transform: uppercase;
-  height: 50px;
+  height: 60px;
   line-height: 1;
 
   @include respond-to(small) {
@@ -46,10 +53,11 @@ a {
   > h1 {
     font-size: .7em;
     font-weight: normal;
+    text-transform: uppercase;
     margin: 0;
 
     @include respond-to(small) {
-      font-size: 1em;
+      font-size: 1.2em;
     }
   }
 
@@ -57,11 +65,11 @@ a {
     display: flex;
 
     > .nav-link {
-      font-size: .5em;
+      font-size: .7em;
       margin-left: $grid/2;
 
       @include respond-to(small) {
-        font-size: .8em;
+        font-size: 1em;
         margin-left: $grid;
       }
 
@@ -238,23 +246,23 @@ a {
   .cover-image {
     object-fit: cover;
     opacity: .8;
-    height: 200px;
+    height: 180px;
     margin-bottom: $grid/2;
 
     @include respond-to(small) {
-      height: 180px;
+      height: 160px;
     }
 
     @include respond-to(medium) {
-      height: 180px;
+      height: 160px;
     }
 
     @include respond-to(large) {
-      height: 240px;
+      height: 200px;
     }
 
     @include respond-to(x-large) {
-      height: 240px;
+      height: 200px;
     }
   }
 
