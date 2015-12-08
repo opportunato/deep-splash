@@ -1,4 +1,13 @@
 RailsAdmin.config do |config|
+  config.authenticate_with do
+    if ENV['ADMIN_USERNAME'].present?
+      authenticate_or_request_with_http_basic do |username, password|
+        username == ENV['ADMIN_USERNAME'] &&
+        password == ENV['ADMIN_PASSWORD']
+      end
+    end
+  end
+
   config.main_app_name = ['deepsplash', 'Admin']
 
   config.included_models = [Post]
