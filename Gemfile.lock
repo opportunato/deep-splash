@@ -116,6 +116,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     mime-types (2.6.2)
     mina (0.3.0)
       open4
@@ -230,6 +232,7 @@ DEPENDENCIES
   figaro
   friendly_id (~> 5.1.0)
   jquery-rails
+  meta-tags
   mina-stack!
   mini_magick
   paperclip

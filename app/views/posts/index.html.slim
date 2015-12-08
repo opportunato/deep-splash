@@ -1,3 +1,10 @@
+- title = "The Deep Splash"
+- description = "The Deep Splash is a project documenting the diverging ideas and motivations of Lithuanian émigrés working in the Arts. The project is supported by the Lithuanian Council for Culture."
+
+- set_meta_tags title: title
+- set_meta_tags description: description
+- set_meta_tags og: { title: title, type: "article", image: image_url('deepfb.jpg'), description: description, url: "http://www.thedeepsplash.com", site_name: title }
+
 .posts.posts-index
   - @posts.each_with_index do |post, index|
     = render partial: "post", locals: { post: post, index: index }

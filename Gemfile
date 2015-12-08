@@ -26,6 +26,8 @@ gem 'puma'
 
 gem 'figaro'
 
+gem 'meta-tags'
+
 gem 'autoprefixer-rails'
 gem 'friendly_id', '~> 5.1.0'
 
