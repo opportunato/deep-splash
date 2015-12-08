@@ -13,9 +13,70 @@ body {
     padding: 0 $grid/2;
   }
 
-  // @include respond-to(medium) {
-  //   padding: 0 $grid/2;
-  // }
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.about-popup {
+  transition: opacity .3s $baseTransitionStyle, visibility .3s $baseTransitionStyle;
+  opacity: 0; visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  &.active {
+    opacity: 1; visibility: visible;
+  }
+
+  > .overlay {
+    background: $color-black;
+    width: 100vw;
+    height: 100vh;
+    opacity: .9;
+  }
+
+  > .wrapper {
+    position: absolute;
+    top: 50%; left: 50%;
+
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    width: $row-width-s;
+    margin: auto;
+
+    @include respond-to(small) {
+      font-size: 1.2em;
+      width: 100%;
+      padding: 0 $grid;
+    }
+
+    @include respond-to(medium) {
+      font-size: 1.2em;
+      padding-right: 50%;
+      max-width: $row-width-xl;
+    }
+
+    @include respond-to(large) {
+      font-size: 1.6em;
+    }
+
+    @include respond-to(x-large) {
+      padding-left: 0;
+      padding-right: 30%;
+      font-size: 1.8em;
+    }
+
+    > p {
+      margin-top: 0;
+
+      > a {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 a {
@@ -358,6 +419,7 @@ iframe {
   .post-link {
     text-decoration: underline;
     font-size: 1.2em;
+    word-wrap: break-word;
 
     @include respond-to(small) {
       font-size: 1em;
