@@ -1,5 +1,5 @@
 - title = @post.author
-- description = Nokogiri::HTML.parse(@post.description).css('p').first.try(:text)
+- description = Nokogiri::HTML.parse(@post.body).css('p').first.try(:text)
 
 - set_meta_tags title: title
 - set_meta_tags description: description
