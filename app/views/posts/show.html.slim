@@ -3,7 +3,7 @@
 
 - set_meta_tags title: title
 - set_meta_tags description: description
-- set_meta_tags og: { title: title, type: "article", image: image_url(@post.preview_image.url(:normal)), description: description, url: "http://www.thedeepsplash.com", site_name: title }
+- set_meta_tags og: { title: title, type: "article", image: image_url(@post.preview_image.url(:normal)), description: description, url: request.original_url, site_name: title }
 
 article.post-page
   .iframe
